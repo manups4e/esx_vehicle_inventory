@@ -315,6 +315,7 @@ AddEventHandler('esx_truck_inventory:getInventoryLoaded', function(inventory,wei
 				  function(data4, menu4)
 		            SetVehicleDoorShut(vehFrontBack, 5, false)
 				    ESX.UI.Menu.CloseAll()
+			            TriggerServerEvent("esx_truck_inventory:CloseTrunk", GetVehicleNumberPlateText(vehFront))
 				  end
 				)
 			end)
@@ -380,6 +381,7 @@ AddEventHandler('esx_truck_inventory:getInventoryLoaded', function(inventory,wei
 	            end
 			  end,
 			  function(data2, menu2)
+		            TriggerServerEvent("esx_truck_inventory:CloseTrunk", GetVehicleNumberPlateText(vehFront))
 	            SetVehicleDoorShut(vehFrontBack, 5, false)
 			    ESX.UI.Menu.CloseAll()
 			  end
