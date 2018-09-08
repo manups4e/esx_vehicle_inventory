@@ -308,7 +308,7 @@ AddEventHandler('esx_truck_inventory:getInventoryLoaded', function(inventory,wei
 			      		ESX.ShowNotification('~r~ Invalid Quantity')
 				    end
 
-		                    TriggerServerEvent("esx_truck_inventory:CloseTrunk", GetVehicleNumberPlateText(lastVehicle))
+		                    TriggerServerEvent("esx_truck_inventory:CloseTrunk", GetVehicleNumberPlateText(vehFront))
 				    ESX.UI.Menu.CloseAll()
 
 
@@ -371,7 +371,7 @@ AddEventHandler('esx_truck_inventory:getInventoryLoaded', function(inventory,wei
 			    end
 
 			    ESX.UI.Menu.CloseAll()
-			    TriggerServerEvent("esx_truck_inventory:CloseTrunk", GetVehicleNumberPlateText(lastVehicle))
+			    TriggerServerEvent("esx_truck_inventory:CloseTrunk", GetVehicleNumberPlateText(vehFront))
 
 	        	local vehFront = VehicleInFront()
 	          	if vehFront > 0 then
